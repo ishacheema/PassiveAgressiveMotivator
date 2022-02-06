@@ -1,16 +1,24 @@
 {
     "manifest_version": 2,
 
-    "name": "Click It",
-    "description": "My first chrome extension",
+    "name": "PassiveAgressiveMotivator",
+    "description": "The best motivator in the world!",
     "version": "1.0",
-    "author": "H.i",
+    "author": "H.I",
+
+    "chrome_url_overrides" : {
+        "newtab": "background.html"
+    },
+
     "browser_action": {
-        "default_icon": "icon.png",    
-        "default_popup": "popup.html",
-        "default_title": "My custom google extension"
+        "default_icon": "icon.png"
     },
     "permissions": [
-        "activeTab"
-    ]
+        "tabs"
+    ],
+
+    "background": {
+        "scripts": ["background.js"],
+        "persistent": false
+    } 
 } 
